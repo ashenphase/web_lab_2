@@ -1,0 +1,109 @@
+:root {
+    --dark-blue:  #1a2b4a;
+    --green:      #4caf7d;
+    --green-dark: #3d8f66;
+    --white:      #ffffff;
+    --input-bg:   #0d1b2b;
+    --border:     #1f3a5c;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    line-height: 1.6;
+}
+
+/* Фон на весь экран + центрирование формы */
+.login-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    background-image:
+        linear-gradient(rgba(9, 25, 40, 0.75), rgba(9, 25, 40, 0.75)),
+        url('images/login_photo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Форма */
+.login-form {
+    background-color: var(--card-bg, #112236);
+    padding: 40px 35px;
+    border: 1px solid var(--border);
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.login-form h1 {
+    text-align: center;
+    color: var(--green);
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.login-form label {
+    color: var(--green);
+    font-weight: 600;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 11px 14px;
+    background-color: var(--input-bg);
+    color: var(--white);
+    border: 1px solid var(--border);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: var(--green);
+}
+
+.login-form label.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.login-form input[type="checkbox"] {
+    accent-color: var(--green);
+    width: 18px;
+    height: 18px;
+}
+
+.login-form button {
+    background-color: var(--green);
+    color: var(--dark-blue);
+    border: none;
+    padding: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: var(--green-dark);
+    color: var(--white);
+}
+
+.login-form .back-link {
+    text-align: center;
+    color: var(--green);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
